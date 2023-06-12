@@ -1,0 +1,206 @@
+    let titulo =  []; descricao = []; usuario = []; qntdLikes = []; buscausuario = [];
+
+    let maior
+
+    let menor
+
+
+    //entrada de dados
+
+    for(let i=0;i<10;i++){
+
+        titulo[i] = prompt(`Entre com o títilo do ${i+1}º post`)
+        descricao[i] = prompt(`Entre com a descrição do ${i+1}º post`)
+        let aux = prompt(`Entre com o usuário do ${i+1}º post`)
+        
+        //checa se usuario ja existe
+
+        while (usuario.includes(aux)){
+            aux = prompt(`Usuário ja existente! Entre com outro`)
+        }
+
+        usuario[i] = aux
+        let aux2 = Number(prompt(`Entre com a quantidade de likes do ${i+1}º post`))
+
+        //checa se a quantidade de likes é negativa
+
+        while(aux2 < 0){
+            aux2 = Number(prompt(`Numero de likes invalido, entre novamente`))
+        }
+
+        qntdLikes[i] = aux2
+    }
+
+    //alerta do modo edição
+
+    alert(`(MODO EDIÇÃO) É permitido fazer 5 mudanças nos posts!`)
+
+    for(let i = 0; i<10; i++){
+
+        //busca do usuario para edição
+
+        buscausuario[i] = prompt("Entre com o usuário que deseja efetuar a mudança de dados: ")
+
+        //checa se usuario existe 
+
+        if(usuario.includes(buscausuario[i])){
+
+            //pega o indice do usuario desejado
+
+            let i2 = usuario.indexOf(buscausuario[i])
+
+            //nova quantidade de likes
+
+            let like2 = Number(prompt(`Digite a nova quandidade de likes de ${usuario[i2]} (Quantidade antiga = ${qntdLikes[i2]})`))
+
+            while(like2 < 0){
+                let like2 = Number(prompt(`Quantidade negativa de likes, digite uma nova quantidade!`))
+            }
+
+            qntdLikes[i2] = like2
+
+        }
+
+        //informa não foi encontrado o usuario para edição
+
+        else{
+            alert("Usuário não encontrado")
+        }
+    }
+
+    //verifica quais são os posts com maior e menor quantidade de likes
+
+    maior = qntdLikes[0]
+    let i3 = 0
+
+    menor = qntdLikes[0]
+    let i4 = 0
+
+    for(let i = 1; i<10; i++){
+
+        if(qntdLikes[i] > maior){ 
+
+            maior = qntdLikes[i]
+    let titulo =  []; descricao = []; usuario = []; qntdLikes = []; buscausuario = [];
+
+    let maior
+
+    let menor
+
+
+    //entrada de dados
+
+    for(let i=0;i<10;i++){
+
+        titulo[i] = prompt(`Entre com o títilo do ${i+1}º post`)
+        descricao[i] = prompt(`Entre com a descrição do ${i+1}º post`)
+        let aux = prompt(`Entre com o usuário do ${i+1}º post`)
+        
+        //checa se usuario ja existe
+
+        while (usuario.includes(aux)){
+            aux = prompt(`Usuário ja existente! Entre com outro`)
+        }
+
+        usuario[i] = aux
+        let aux2 = Number(prompt(`Entre com a quantidade de likes do ${i+1}º post`))
+
+        //checa se a quantidade de likes é negativa
+
+        while(aux2 < 0){
+            aux2 = Number(prompt(`Numero de likes invalido, entre novamente`))
+        }
+
+        qntdLikes[i] = aux2
+    }
+
+    //alerta do modo edição
+
+    alert(`(MODO EDIÇÃO) É permitido fazer 5 mudanças nos posts!`)
+
+    for(let i = 0; i<10; i++){
+
+        //busca do usuario para edição
+
+        buscausuario[i] = prompt("Entre com o usuário que deseja efetuar a mudança de dados: ")
+
+        //checa se usuario existe 
+
+        if(usuario.includes(buscausuario[i])){
+
+            //pega o indice do usuario desejado
+
+            let i2 = usuario.indexOf(buscausuario[i])
+
+            //nova quantidade de likes
+
+            let like2 = Number(prompt(`Digite a nova quandidade de likes de ${usuario[i2]} (Quantidade antiga = ${qntdLikes[i2]})`))
+
+            while(like2 < 0){
+                let like2 = Number(prompt(`Quantidade negativa de likes, digite uma nova quantidade!`))
+            }
+
+            qntdLikes[i2] = like2
+
+        }
+
+        //informa não foi encontrado o usuario para edição
+
+        else{
+            alert("Usuário não encontrado")
+        }
+    }
+
+    //verifica quais são os posts com maior e menor quantidade de likes
+
+    maior = qntdLikes[0]
+    let i3 = 0
+
+    menor = qntdLikes[0]
+    let i4 = 0
+
+    for(let i = 1; i<10; i++){
+
+        if(qntdLikes[i] > maior){ 
+
+            maior = qntdLikes[i]
+
+             i3 = qntdLikes.indexOf(maior)
+
+        }
+
+        else if(qntdLikes[i] < menor){
+        
+
+            menor = qntdLikes[i]
+
+             i4 = qntdLikes.indexOf(menor)
+
+        }
+    }
+
+    //alerta o nome, descrição e titulo do maior e do menor post
+
+    alert(`O post com maior quantidade de likes foi de: ${usuario[i3]}\nTitulo: ${titulo[i3]}\nDescrição: ${descricao[i3]}`)
+
+    alert(`O post com menor quantidade de likes foi de: ${usuario[i4]}\nTitulo: ${titulo[i4]}\nDescrição: ${descricao[i4]}`)
+
+             i3 = qntdLikes.indexOf(maior)
+
+        }
+
+        else if(qntdLikes[i] < menor){
+        
+
+            menor = qntdLikes[i]
+
+             i4 = qntdLikes.indexOf(menor)
+
+        }
+    }
+
+    //alerta o nome, descrição e titulo do maior e do menor post
+
+    alert(`O post com maior quantidade de likes foi de: ${usuario[i3]}\nTitulo: ${titulo[i3]}\nDescrição: ${descricao[i3]}`)
+
+    alert(`O post com menor quantidade de likes foi de: ${usuario[i4]}\nTitulo: ${titulo[i4]}\nDescrição: ${descricao[i4]}`)
